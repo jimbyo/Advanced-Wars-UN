@@ -20,11 +20,11 @@ public class GameManager : MonoBehaviour
         squares = GameObject.FindGameObjectsWithTag("Square");
         units = GameObject.FindGameObjectsWithTag("Unit");
         // reset the position of all units
-        foreach (var i in units)
-        {
-            i.transform.position = new Vector3(i.transform.position.x,
-            i.transform.position.y,i.transform.position.z);
-        }
+        //foreach (var i in units)
+        //{
+        //    i.transform.position = new Vector3(i.transform.position.x,
+        //    i.transform.position.y,i.transform.position.z);
+        //}
         moveRangeList = new List<GameObject>();
         attackRangeList = new List<GameObject>();
         GetUnitNum();
@@ -44,17 +44,39 @@ public class GameManager : MonoBehaviour
     // search all squares(playerNum == 0) within unit's move range and turn on move range
     {
         TurnOffMoveRange();
-        foreach (var i in squares)
+
+        List<GameObject> current = new List<GameObject>();
+        List<GameObject> open = new List<GameObject>();
+        List<GameObject> closed = new List<GameObject>();
+        current.Add(selected.GetComponent<Unit>().Square);
+        int mr = selected.GetComponent<Unit>().moveRange;
+        for (int i=0; i<mr; i++)
         {
-            int moveRange = selected.GetComponent<Unit>().moveRange;
-            if (Mathf.Abs(i.transform.position.x - selected.transform.position.x) +
-            Mathf.Abs(i.transform.position.y - selected.transform.position.y) <= moveRange
-            && i.GetComponent<Square>().playerNum == 0)
+            foreach (var c in current)
             {
-                i.GetComponent<Square>().moveable = true;
-                i.GetComponent<Square>().moveSquare.SetActive(true);
-                moveRangeList.Add(i);
+                closed.Add(c);
+                List<GameObject> neighbours = c.GetComponent<Square>().Neighbours();
+                foreach (var n in neighbours)
+                {
+                    if (n.GetComponent<Square>().playerNum != 0 || findObj(closed, n))
+                    {
+                        continue;
+                    }
+                    if (!findObj(closed, n))
+                    {
+                        open.Add(n);
+                        n.GetComponent<Square>().moveable = true;
+                        n.GetComponent<Square>().moveSquare.SetActive(true);
+                        moveRangeList.Add(n);
+                    }
+                }
             }
+            current.Clear();
+            foreach (var o in open)
+            {
+                current.Add(o);
+            }
+            open.Clear();
         }
     }
 
@@ -72,7 +94,7 @@ public class GameManager : MonoBehaviour
     public void TurnOnAttackRange()
     // search all squares(playerNum != unit's playNum) within unit's attack range and turn on attack range
     {
-            TurnOffAllRanges();
+        TurnOffAllRanges();
             foreach (var i in squares)
             {
                 int attackRange = selected.GetComponent<Unit>().attackRange;
@@ -161,6 +183,16 @@ public class GameManager : MonoBehaviour
             Unit u = i.GetComponent<Unit>();
             unitCount[u.playerNum]++;
         }
+    }
+
+    bool findObj(List<GameObject> l, GameObject obj)
+    {
+        foreach (var i in l)
+        {
+            if (obj == i)
+                return true;
+        }
+        return false;
     }
 
 }

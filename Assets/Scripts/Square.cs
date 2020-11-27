@@ -43,4 +43,27 @@ public class Square : MonoBehaviour
             }
         }
     }
+
+    public List<GameObject> Neighbours()
+    {
+        List<GameObject> objs = new List<GameObject>();
+        Vector2 p = new Vector2(transform.position.x, transform.position.y);
+        RaycastHit2D hit;
+        Vector2[] direction = new Vector2[] {Vector2.up, Vector2.down, Vector2.left, Vector2.right};
+        foreach (Vector2 v in direction)
+        {
+            hit = Physics2D.Raycast(p + v, v);
+            if (hit.collider != null && hit.collider.CompareTag("Square"))
+            {
+                objs.Add(hit.collider.gameObject);
+            }
+        }
+
+        return objs;
+    }
 }
+
+
+
+
+

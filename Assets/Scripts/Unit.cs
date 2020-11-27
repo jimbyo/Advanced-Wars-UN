@@ -22,6 +22,7 @@ public class Unit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SetStandSquare(true);
         HP = maxHP;
         GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         UM = GameObject.Find("Canvas").GetComponent<UIManager>();

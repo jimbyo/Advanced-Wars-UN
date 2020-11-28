@@ -115,7 +115,15 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 471}
   m_MaxSize: {x: 14000, y: 14021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 4317
+=======
+<<<<<<< HEAD
+  controlID: 36
+=======
+  controlID: 1725
+>>>>>>> 8eb3a0b45c95352177056902a99fc971ed359616
+>>>>>>> 0b70334b41b999e23b2e8480edb32a802a67799b
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +148,15 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 471}
   m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
+<<<<<<< HEAD
   controlID: 4248
+=======
+<<<<<<< HEAD
+  controlID: 37
+=======
+  controlID: 1800
+>>>>>>> 8eb3a0b45c95352177056902a99fc971ed359616
+>>>>>>> 0b70334b41b999e23b2e8480edb32a802a67799b
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +181,15 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 4292
+=======
+<<<<<<< HEAD
+  controlID: 94
+=======
+  controlID: 1801
+>>>>>>> 8eb3a0b45c95352177056902a99fc971ed359616
+>>>>>>> 0b70334b41b999e23b2e8480edb32a802a67799b
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -396,7 +420,15 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 68430000
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: c07bffffc2adfffff4e7ffff6afbffffb2430000be430000
+=======
+<<<<<<< HEAD
+      m_ExpandedIDs: 6afbffff
+=======
+      m_ExpandedIDs: 6afbffffe4390000fc3a0000
+>>>>>>> 8eb3a0b45c95352177056902a99fc971ed359616
+>>>>>>> 0b70334b41b999e23b2e8480edb32a802a67799b
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -600,7 +632,27 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Scenes
+=======
+<<<<<<< HEAD
+    - Packages/com.unity.2d.animation/Editor/Assets/LayoutOverlay
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Packages/com.unity.2d.animation/Editor/Assets/LayoutOverlay
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: /Users/jimzhan/Game_Dev/Advanced-Wars-UN
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: d4380000
+    m_LastClickedID: 14548
+    m_ExpandedIDs: 00000000c4380000ce380000d0380000d238000000ca9a3bffffff7f
+=======
+    - Assets/Scripts
+>>>>>>> 0b70334b41b999e23b2e8480edb32a802a67799b
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
@@ -614,6 +666,7 @@ MonoBehaviour:
     m_SelectedIDs: e4400000
     m_LastClickedID: 16612
     m_ExpandedIDs: 00000000b6400000b8400000ba400000
+>>>>>>> 8eb3a0b45c95352177056902a99fc971ed359616
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -641,7 +694,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
+    m_ExpandedIDs: 00000000c4380000
+=======
     m_ExpandedIDs: 00000000b6400000b8400000ba400000
+>>>>>>> 8eb3a0b45c95352177056902a99fc971ed359616
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
